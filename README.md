@@ -4,6 +4,8 @@
 
 **Status:** v0.1.0, working. Cross-checked against `llvm-readobj` on real files.
 
+![binspect showing the header, features, sections, segments, imports and exports of an ELF shared library](docs/images/elf.png)
+
 ## Features
 
 - One model for both formats: the parsers fill a shared `Binary` structure and the renderers read only that, so the same flags and columns work on ELF and PE.
@@ -80,6 +82,8 @@ exports (2):
 | `--json` | The whole model as JSON. |
 
 Exit status: 0 success, 1 not a valid ELF or PE file, 2 file could not be read.
+
+![binspect listing the CreateFile imports and exports of kernel32.dll, including forwarded exports](docs/images/pe.png)
 
 ## How it works
 

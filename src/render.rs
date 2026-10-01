@@ -85,7 +85,7 @@ pub fn render(bin: &Binary, file: &str, show: &Show) -> String {
         let _ = writeln!(o, "features:   {}", bin.features.join(", "));
     }
     if !bin.libraries.is_empty() {
-        let shown = if show.limit == 0 { bin.libraries.len() } else { bin.libraries.len().min(6) };
+        let shown = if show.limit == 0 { bin.libraries.len() } else { bin.libraries.len().min(4) };
         let more = bin.libraries.len() - shown;
         let _ = writeln!(
             o,
